@@ -32,7 +32,10 @@ export default function SearchHeader() {
         <h1 className="font-bold ml-2 text-3xl">Youtube</h1>
         {/* <h1>Youtube</h1> */}
       </Link>
-      <form className="w-full flex justify-center " onSubmit={handleSubmit}>
+      <form
+        className="w-full flex justify-center bg-red-500"
+        onSubmit={handleSubmit}
+      >
         {/* <form onSubmit={handleSubmit}> */}
         <input
           className="w-7/12 p-2 outline-none bg-black text-gray-50"
