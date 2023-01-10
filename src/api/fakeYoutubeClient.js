@@ -1,13 +1,20 @@
 import axios from "axios";
 
-export default class FakeYoutube {
+export default class FakeYoutubeClient {
   //리팩토링 한 코드
-  async search() {
-    return axios.get(`/data/search.json`);
+  constructor() {}
+  async search({ params }) {
+    return params.relatedToVideoId
+      ? axios.get(`/data/related.json`)
+      : axios.get(`/data/search.json`);
   }
 
   async videos() {
     return axios.get("/data/popular.json");
+  }
+
+  async channels() {
+    return axios.get("/data/channel.json");
   }
 
   //리팩토링 하기 전 코드

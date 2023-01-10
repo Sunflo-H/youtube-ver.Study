@@ -17,6 +17,10 @@ export default class YoutubeClient {
     return this.httpClient.get("videos", params);
   }
 
+  async channels(params) {
+    return this.httpClient.get("channels", params);
+  }
+
   // 리팩토링 하기 전 코드
   // async search(keyword) {
   //   return keyword ? this.#searchByKeyword(keyword) : this.#popular();
